@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { MatInputModule } from '@angular/material/input';
 import { LoginComponent } from './login';
 import { DashComponent } from './dash';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DashComponent } from './dash';
     BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
-    MatInputModule  
+    MatInputModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
