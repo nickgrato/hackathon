@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { LoginComponent } from './login';
 import { DashComponent } from './dash';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MatCardModule } from '@angular/material/card';
     BrowserModule,
     AppRoutingModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
