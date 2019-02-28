@@ -10,10 +10,10 @@ import { Themes } from './service/enums/themes.enum';
   styleUrls: ['./dash.scss'],
 })
 export class DashComponent implements OnInit{
-  defaultUser: User;
-  user1: User;
-  user2: User;
-  user3: User;
+  defaultUser: User = new User();
+  user1: User = new User();
+  user2: User = new User();
+  user3: User = new User();
 
   ngOnInit() {
     this.defaultUser.userId = 0;
