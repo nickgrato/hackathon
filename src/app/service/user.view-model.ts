@@ -4,7 +4,7 @@ import { AccessoryTypes } from './enums/accessory-types.enum';
 export class User {
     public userId: number;
     public theme: any;
-    public motorcycleType: MotorcycleTypes;
-    public accessoryType: AccessoryTypes;
+    public motorcycleType: MotorcycleTypes[] = new Array<MotorcycleTypes>();
+    public accessoryType: AccessoryTypes[] = new Array<AccessoryTypes>()
     public timeSpent: number;
 }
