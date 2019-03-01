@@ -10,6 +10,7 @@ import { Themes } from './service/enums/themes.enum';
   styleUrls: ['./dash.scss'],
 })
 export class DashComponent implements OnInit{
+  currentUser: User;
   defaultUser: User = new User();
   user1: User = new User();
   user2: User = new User();
@@ -23,7 +24,7 @@ export class DashComponent implements OnInit{
     this.defaultUser.timeSpent = 0;
     
     this.user1.userId = 1;
-    this.user1.theme = Themes.Sport
+    this.user1.theme = Themes.Sport;
     this.user1.motorcycleType = [MotorcycleTypes.Sport, MotorcycleTypes.Cruiser, MotorcycleTypes.Dirt];
     this.user1.accessoryType = [AccessoryTypes.Exhaust, AccessoryTypes.Gloves, AccessoryTypes.Jackets, AccessoryTypes.Tires, AccessoryTypes.Boots];
     this.user1.timeSpent = 60;
@@ -39,5 +40,22 @@ export class DashComponent implements OnInit{
     this.user3.motorcycleType = [MotorcycleTypes.Sport, MotorcycleTypes.Dirt, MotorcycleTypes.Cruiser];
     this.user3.accessoryType = [AccessoryTypes.Jackets, AccessoryTypes.Gloves, AccessoryTypes.Boots, AccessoryTypes.Tires, AccessoryTypes.Exhaust];
     this.user3.timeSpent = 30;
+  }
+
+  setUser(userId: number) {
+    switch(userId) {
+      case 1:
+        this.currentUser = this.user1;
+        break;
+      case 2:
+        this.currentUser = this.user2;
+        break;
+      case 3:
+        this.currentUser = this.user3;
+        break;
+      default:
+        this.currentUser = this.defaultUser;
+        break;
+    }
   }
 }
