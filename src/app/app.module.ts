@@ -9,6 +9,7 @@ import { LoginComponent } from './login';
 import { DashComponent } from './dash';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule} from '@angular/material/toolbar';
+import { MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatToolbarModule} from '@angular/material/toolbar';
     AppRoutingModule,
     MatInputModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
